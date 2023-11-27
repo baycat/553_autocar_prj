@@ -92,11 +92,16 @@ def righter():
 
 
 # speed, i am speed
+
+# start with setting default speed to initial speeds
 steady_speed()
+# let it do that for like 3 seconds
 time.sleep(3)
 faster_speed()
+# let it do that for like 3 seconds
 time.sleep(3)
 stop()
+# let it do that for like 3 seconds
 time.sleep(3)
 crawling_speed()
 steady_speed()
@@ -104,9 +109,13 @@ steady_speed()
 
 # check steering
 center()
+# let it do that for like 2 seconds
 time.sleep(2)
 lefter()
+# let it do that for like 2 seconds
 time.sleep(2)
 righter()
+# let it do that for like 2
+#  seconds
 time.sleep(2)
 center()
