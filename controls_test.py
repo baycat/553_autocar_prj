@@ -70,7 +70,7 @@ def center():
 
 # function to set motor controller to turn axel to left
 def lefter():
-    # set veer value to give 6% to drive left motor strong
+    # set veer value to give 6% to turn wheels left
     left_veer = int(.06 * 20000000)
     print("veer: ", left_veer)
     print("going left")
@@ -78,6 +78,7 @@ def lefter():
 
 # function to set motor controller to turn axel to right
 def righter():
+    # set veer value to give 9% to turn wheels right
     right_veer = int(.09 * 20000000)
     print("veer: ", right_veer)
     print("going right")
