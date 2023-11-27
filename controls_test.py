@@ -44,8 +44,8 @@ def crawling_speed():
 
 # function to drive motor at a stop speed
 def stop():
-    # set speed value to give 8% to drive motor
-    stop_speed = 1600000
+    # set speed value to give 7.75% to drive motor
+    stop_speed = 1550000
     # print speed setting
     print("speed: ", stop_speed)
     # print 'going stop' intention
@@ -73,7 +73,7 @@ def center():
 # function to set motor controller to turn axel to left
 def lefter():
     # set veer value to give 6% to turn wheels left
-    left_veer = int(.06 * 20000000)
+    left_veer = int(.09 * 20000000)
     # print veer setting
     print("veer: ", left_veer)
     # print 'going left' intention
@@ -83,7 +83,7 @@ def lefter():
 # function to set motor controller to turn axel to right
 def righter():
     # set veer value to give 9% to turn wheels right
-    right_veer = int(.09 * 20000000)
+    right_veer = int(.06 * 20000000)
     # print veer setting
     print("veer: ", right_veer)
     # print 'going right' intention
@@ -104,7 +104,7 @@ time.sleep(3)
 # stop car
 stop()
 # let it do that for like 3 seconds
-time.sleep(3)
+time.sleep(5)
 # slow down car
 crawling_speed()
 # go back to default speed
