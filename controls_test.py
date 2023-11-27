@@ -6,7 +6,7 @@ import time
 def set_speed(speed):
     # access pin initial values
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        # write desired speeds to gpio values
+        # write desired speed to gpio value
         filetowrite.write(str(speed))
 
 # function to drive motor at a slow speed
@@ -53,23 +53,30 @@ def stop():
     # write the new speed value to the initial gpio pin setting to drive motor
     set_speed(stop_speed)
 
-
+# function to write a new initial value to the gpio pin
 def set_turnish(veer):
+    # access pin initial values
     with open('/dev/bone/pwm/1/b/duty_cycle', 'w') as filetowrite:
+        # write desired speed to gpio value
         filetowrite.write(str(veer))
 
+# function to set motor controller to turn axel to center
 def center():
+    # set veer value to give 7.5% to drive motors equally
     no_veer = int(.075 * 20000000)
     print("veer: ", no_veer)
     print("going forward")
     set_turnish(no_veer)
 
+# function to set motor controller to turn axel to left
 def lefter():
+    # set veer value to give 6% to drive left motor strong
     left_veer = int(.06 * 20000000)
     print("veer: ", left_veer)
     print("going left")
     set_turnish(left_veer)
 
+# function to set motor controller to turn axel to right
 def righter():
     right_veer = int(.09 * 20000000)
     print("veer: ", right_veer)
