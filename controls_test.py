@@ -97,13 +97,17 @@ def righter():
 steady_speed()
 # let it do that for like 3 seconds
 time.sleep(3)
+# speed up car
 faster_speed()
 # let it do that for like 3 seconds
 time.sleep(3)
+# stop car
 stop()
 # let it do that for like 3 seconds
 time.sleep(3)
+# slow down car
 crawling_speed()
+# go back to default speed
 steady_speed()
 
 
@@ -111,11 +115,13 @@ steady_speed()
 center()
 # let it do that for like 2 seconds
 time.sleep(2)
+# turn car left
 lefter()
 # let it do that for like 2 seconds
 time.sleep(2)
+# turn car right
 righter()
-# let it do that for like 2
-#  seconds
+# let it do that for like 2 seconds
 time.sleep(2)
+# turn car center
 center()
