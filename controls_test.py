@@ -64,7 +64,9 @@ def set_turnish(veer):
 def center():
     # set veer value to give 7.5% to drive motors equally
     no_veer = int(.075 * 20000000)
+    # print veer setting
     print("veer: ", no_veer)
+    # print 'going center' intention
     print("going forward")
     set_turnish(no_veer)
 
@@ -72,7 +74,9 @@ def center():
 def lefter():
     # set veer value to give 6% to turn wheels left
     left_veer = int(.06 * 20000000)
+    # print veer setting
     print("veer: ", left_veer)
+    # print 'going left' intention
     print("going left")
     set_turnish(left_veer)
 
@@ -80,7 +84,9 @@ def lefter():
 def righter():
     # set veer value to give 9% to turn wheels right
     right_veer = int(.09 * 20000000)
+    # print veer setting
     print("veer: ", right_veer)
+    # print 'going right' intention
     print("going right")
     set_turnish(right_veer)
 
