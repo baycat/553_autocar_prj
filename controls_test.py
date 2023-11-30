@@ -1,3 +1,8 @@
+"""
+Citations: User raja_961, “Autonomous Lane-Keeping Car Using RaspberryPi and OpenCV”. Instructables. 
+URL: https://www.instructables.com/Autonomous-Lane-Keeping-Car-Using-Raspberry-Pi-and/
+"""
+
 # import statments
 import math
 import time
