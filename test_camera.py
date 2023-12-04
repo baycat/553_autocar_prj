@@ -1,6 +1,6 @@
 import cv2
 
-video = cv2.VideoCapture(0)
+video = cv2.opticalencoder
 
 while True:
   ret,frame = video.read()
