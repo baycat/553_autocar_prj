@@ -438,18 +438,18 @@ print("main loop")
 while counter < max_ticks:
     # Read in the video feed
     ret, original_frame = video.read()
-    
+    print("after read")
     # If there is no video
     if original_frame is None:
       print("No frame")
-
+    print("no frame check")
     # reize the frame
     frame = cv2.resize(original_frame, (160, 120))
-
+    print("resize")
     # Show the resized frame
     if sightDebug:
         cv2.imshow("Resized Frame", frame)
-        
+    print("show resized")
     # check for stop sign every couple ticks
     if ((counter + 1) % stopSignCheck) == 0:
         # check for the first stop sign
