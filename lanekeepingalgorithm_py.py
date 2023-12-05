@@ -20,7 +20,7 @@ speed_list = []
 steering_list = []
 
 #Max speed value
-max_speed = 1630000
+max_speed = 1650000
 # Step size of speed increase/decrease
 speed_step = 2500
 #Delay of going faster
@@ -141,21 +141,21 @@ def go():
     """
     global current_speed
 
-    current_speed = 1620000
+    current_speed = 1650000
 
     #Write to move the car
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1615000')
+        filetowrite.write('1644500')
 
 def boost():
 
     # Increase the speed of the car
     global current_speed
 
-    current_speed = 1630000
+    current_speed = 1655000
 
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1625000')  
+        filetowrite.write('1650000')  
 
 
 # Turn the car
@@ -446,8 +446,6 @@ while counter < max_ticks:
     # resize the frame
     frame = cv2.resize(original_frame, (160, 120))
 
-    cv2.imshow('please show picture', frame)
-    cv2.waitKey(0)
     # Show the resized frame
     if sightDebug:
         cv2.imshow("Resized Frame", frame)
