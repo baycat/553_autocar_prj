@@ -20,7 +20,7 @@ speed_list = []
 steering_list = []
 
 #Max speed value
-max_speed = 1650000
+max_speed = 1630000
 # Step size of speed increase/decrease
 speed_step = 2500
 #Delay of going faster
@@ -141,21 +141,21 @@ def go():
     """
     global current_speed
 
-    current_speed = 1650000
+    current_speed = 1620000
 
     #Write to move the car
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1644500')
+        filetowrite.write('1615000')
 
 def boost():
 
     # Increase the speed of the car
     global current_speed
 
-    current_speed = 1655000
+    current_speed = 1630000
 
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1650000')  
+        filetowrite.write('1625000')  
 
 
 # Turn the car
@@ -447,6 +447,7 @@ while counter < max_ticks:
     frame = cv2.resize(original_frame, (160, 120))
 
     cv2.imshow('please show picture', frame)
+    cv2.waitKey(0)
     # Show the resized frame
     if sightDebug:
         cv2.imshow("Resized Frame", frame)
@@ -543,14 +544,14 @@ while counter < max_ticks:
     lastTime = time.time()
 
     # Use speed encoding to give the car a 'boost' if needed
-    with open('/sys/module/gpiod_driver/parameters/diff') as f:
-        lines = f.readlines()
-        if lines:
-            dif = int(lines[0])
-            print("Received difference of " + str(dif))
-            if dif > 100:
-                boost()
-                current_speed = 1650000
+    # with open('/sys/module/gpiod_driver/parameters/diff') as f:
+    #     lines = f.readlines()
+    #     if lines:
+    #         dif = int(lines[0])
+    #         print("Received difference of " + str(dif))
+    #         if dif > 100:
+    #             boost()
+    #             current_speed = 1650000
 
 
     # update PD values for next loop
