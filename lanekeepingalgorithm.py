@@ -476,14 +476,15 @@ while counter < max_ticks:
 
         # check for the second stop sign
         elif passedFirstStopSign and counter > secondStopSignTick:
-            go()
-            print('go!')
+            boost()
+            print('boost!')
             print(secondStopSignTick)
             print (counter)
             isStop2SignBool, _ = isRedFloorVisible(frame)
             if isStop2SignBool:
                 # last stop sign detected, exits while loop
                 print("detected second stop sign, stopping")
+                time.sleep(1) # wait for one second
                 stop()
                 steer_pwm.append(turn_amt)
                 speed_pwm.append(current_speed)
