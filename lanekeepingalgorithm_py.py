@@ -430,8 +430,8 @@ sightDebug = True
 isStopSignBool = False
 
 # start the engines
-go()
-print("go!")
+# go()
+# print("go!")
 
 # main while loop
 print("main loop")
@@ -561,6 +561,8 @@ while counter < max_ticks:
         print("key 27")
         break
 
+    go()
+    print("go!")
     counter += 1
 
 # clean up resources
