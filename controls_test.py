@@ -17,7 +17,7 @@ def set_speed(speed):
 # function to drive motor at a slow speed
 def steady_speed():
     # set speed value to give 8.1% to drive motor
-    steady_speed = 1617500
+    steady_speed = 1630000
     # print speed setting
     print("speed: ", steady_speed)
     # print 'going' intention
@@ -28,7 +28,7 @@ def steady_speed():
 # function to drive motor at a faster speed
 def faster_speed():
     # set speed value to give 8.175% to drive motor
-    faster_speed = 1625000
+    faster_speed = 1635000
     # print speed setting
     print("speed: ", faster_speed)
     # print 'going faster' intention
