@@ -26,14 +26,14 @@ MODULE_INFO(retpoline, "Y");
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xfec63e19, "module_layout" },
+	{ 0x1b9df65c, "param_ops_int" },
 	{ 0x43be31d6, "platform_driver_unregister" },
 	{ 0xad64c90a, "__platform_driver_register" },
-	{ 0xfe990052, "gpio_free" },
+	{ 0xb43f9365, "ktime_get" },
+	{ 0xa5cb4382, "gpiod_set_debounce" },
 	{ 0x92d5838e, "request_threaded_irq" },
 	{ 0x7998ad9c, "gpiod_to_irq" },
 	{ 0x936bb658, "devm_gpiod_get" },
-	{ 0x62f2b36, "gpiod_set_value" },
-	{ 0x92da672c, "gpiod_get_value" },
 	{ 0xc5850110, "printk" },
 	{ 0xc1514a3b, "free_irq" },
 };

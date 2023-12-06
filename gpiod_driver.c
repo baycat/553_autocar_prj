@@ -17,7 +17,8 @@ unsigned int irq_number;
 // Time variables
 ktime_t currTime;
 ktime_t prevTime;
-int diff; 
+static int diff = 0;
+int temp; 
 
 // print timing difference to a separate file
 module_param(diff, int, S_IRUGO);
