@@ -459,6 +459,7 @@ while counter < max_ticks:
             if isStopSignBool:
                 print("detected first stop sign, stopping")
                 stop()
+                speed_pwm.append(current_speed)
                 time.sleep(4)
                 passedFirstStopSign = True
                 # this is used to not check for the second stop sign until many frames later
@@ -480,6 +481,7 @@ while counter < max_ticks:
                 # last stop sign detected, exits while loop
                 print("detected second stop sign, stopping")
                 stop()
+                speed_pwm.append(current_speed)
                 break
 
     # makes car go faster, helps it have enough speed to get to the end of the course
