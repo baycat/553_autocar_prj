@@ -571,5 +571,5 @@ video.release()
 cv2.destroyAllWindows()
 
 
-plot_pd(p_vals, d_vals, err_vals, True)
-plot_pwm(speed_pwm, steer_pwm, err_vals, True)
+# plot_pd(p_vals, d_vals, err_vals, True)
+# plot_pwm(speed_pwm, steer_pwm, err_vals, True)
