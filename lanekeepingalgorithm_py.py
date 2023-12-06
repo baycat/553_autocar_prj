@@ -342,50 +342,50 @@ def get_steering_angle(frame, lane_lines):
     return steering_angle
 
 
-# def plot_pd(p_vals, d_vals, error, show_img=False):
-#     # Plot the PD
-#     fig, ax1 = plt.subplots()
-#     t_ax = np.arange(len(p_vals))
-#     ax1.plot(t_ax, p_vals, '-', label="P values")
-#     ax1.plot(t_ax, d_vals, '-', label="D values")
-#     ax2 = ax1.twinx()
-#     ax2.plot(t_ax, error, '--r', label="Error")
+def plot_pd(p_vals, d_vals, error, show_img=False):
+    # Plot the PD
+    fig, ax1 = plt.subplots()
+    t_ax = np.arange(len(p_vals))
+    ax1.plot(t_ax, p_vals, '-', label="P values")
+    ax1.plot(t_ax, d_vals, '-', label="D values")
+    ax2 = ax1.twinx()
+    ax2.plot(t_ax, error, '--r', label="Error")
 
-#     ax1.set_xlabel("Frames")
-#     ax1.set_ylabel("PD Value")
-#     ax2.set_ylim(-90, 90)
-#     ax2.set_ylabel("Error Value")
+    ax1.set_xlabel("Frames")
+    ax1.set_ylabel("PD Value")
+    ax2.set_ylim(-90, 90)
+    ax2.set_ylabel("Error Value")
 
-#     plt.title("PD Values over time")
-#     fig.legend()
-#     fig.tight_layout()
-#     plt.savefig("pd_plot.png")
+    plt.title("PD Values over time")
+    fig.legend()
+    fig.tight_layout()
+    plt.savefig("pd_plot.png")
 
-#     if show_img:
-#         plt.show()
-#     plt.clf()
+    if show_img:
+        plt.show()
+    plt.clf()
 
 
-# def plot_pwm(speed_pwms, turn_pwms, error, show_img=False):
-#     # Plot the PWM
-#     fig, ax1 = plt.subplots()
-#     t_ax = np.arange(len(speed_pwms))
-#     ax1.plot(t_ax, speed_pwms, '-', label="Speed PWM")
-#     ax1.plot(t_ax, turn_pwms, '-', label="Steering PWM")
-#     ax2 = ax1.twinx()
-#     ax2.plot(t_ax, error, '--r', label="Error")
+def plot_pwm(speed_pwms, turn_pwms, error, show_img=False):
+    # Plot the PWM
+    fig, ax1 = plt.subplots()
+    t_ax = np.arange(len(speed_pwms))
+    ax1.plot(t_ax, speed_pwms, '-', label="Speed PWM")
+    ax1.plot(t_ax, turn_pwms, '-', label="Steering PWM")
+    ax2 = ax1.twinx()
+    ax2.plot(t_ax, error, '--r', label="Error")
 
-#     ax1.set_xlabel("Frames")
-#     ax1.set_ylabel("PWM Values")
-#     ax2.set_ylabel("Error Value")
+    ax1.set_xlabel("Frames")
+    ax1.set_ylabel("PWM Values")
+    ax2.set_ylabel("Error Value")
 
-#     plt.title("PWM Values over time")
-#     fig.legend()
-#     plt.savefig("pwm_plot.png")
+    plt.title("PWM Values over time")
+    fig.legend()
+    plt.savefig("pwm_plot.png")
 
-#     if show_img:
-#         plt.show()
-#     plt.clf()
+    if show_img:
+        plt.show()
+    plt.clf()
 
 
 
@@ -571,5 +571,5 @@ video.release()
 cv2.destroyAllWindows()
 
 
-# plot_pd(p_vals, d_vals, err_vals, True)
-# plot_pwm(speed_pwm, steer_pwm, err_vals, True)
+plot_pd(p_vals, d_vals, err_vals, True)
+plot_pwm(speed_pwm, steer_pwm, err_vals, True)
