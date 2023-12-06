@@ -542,14 +542,14 @@ while counter < max_ticks:
     lastTime = time.time()
 
     # Use speed encoding to give the car a 'boost' if needed
-    # with open('/sys/module/gpiod_driver/parameters/diff') as f:
-    #     lines = f.readlines()
-    #     if lines:
-    #         dif = int(lines[0])
-    #         print("Received difference of " + str(dif))
-    #         if dif > 100:
-    #             boost()
-    #             current_speed = 1650000
+    with open('/sys/module/gpiod_driver/parameters/diff') as f:
+        lines = f.readlines()
+        if lines:
+            dif = int(lines[0])
+            print("Received difference of " + str(dif))
+            if dif > 100:
+                boost()
+                current_speed = 1650000
 
 
     # update PD values for next loop
