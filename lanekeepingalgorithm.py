@@ -430,8 +430,8 @@ sightDebug = True
 isStopSignBool = False
 
 # start the engines
-# go()
-# print("go!")
+go()
+print("go!")
 
 # main while loop
 print("main loop")
@@ -459,6 +459,7 @@ while counter < max_ticks:
             if isStopSignBool:
                 print("detected first stop sign, stopping")
                 stop()
+                steer_pwm.append(turn_amt)
                 speed_pwm.append(current_speed)
                 time.sleep(4)
                 passedFirstStopSign = True
@@ -470,10 +471,13 @@ while counter < max_ticks:
                 go_faster_tick = counter + go_faster_tick_delay
                 print("first stop finished!")
                 go()
+                go()
 
 
         # check for the second stop sign
         elif passedFirstStopSign and counter > secondStopSignTick:
+            go()
+            print('go!')
             print(secondStopSignTick)
             print (counter)
             isStop2SignBool, _ = isRedFloorVisible(frame)
@@ -481,6 +485,7 @@ while counter < max_ticks:
                 # last stop sign detected, exits while loop
                 print("detected second stop sign, stopping")
                 stop()
+                steer_pwm.append(turn_amt)
                 speed_pwm.append(current_speed)
                 break
 
@@ -563,8 +568,8 @@ while counter < max_ticks:
         print("key 27")
         break
 
-    go()
-    print("go!")
+    # go()
+    # print("go!")
     counter += 1
 
 # clean up resources
