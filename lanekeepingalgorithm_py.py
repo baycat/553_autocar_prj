@@ -152,10 +152,10 @@ def boost():
     # Increase the speed of the car
     global current_speed
 
-    current_speed = 1655000
+    current_speed = 1640000
 
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1650000')  
+        filetowrite.write('1640000')  
 
 
 # Turn the car
@@ -551,7 +551,7 @@ while counter < max_ticks:
             print("Received difference of " + str(dif))
             if dif > 100:
                 boost()
-                current_speed = 1650000
+                current_speed = 1640000
 
 
     # update PD values for next loop
