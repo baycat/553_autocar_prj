@@ -359,10 +359,10 @@ def plot_pd(p_vals, d_vals, error, show_img=False):
     plt.title("PD Values over time")
     fig.legend()
     fig.tight_layout()
-    plt.savefig("pd_plot.png")
+    plt.savefig("./pd_plot.png")
 
-    if show_img:
-        plt.show()
+    # if show_img:
+    #     plt.show()
     plt.clf()
 
 
@@ -381,10 +381,10 @@ def plot_pwm(speed_pwms, turn_pwms, error, show_img=False):
 
     plt.title("PWM Values over time")
     fig.legend()
-    plt.savefig("pwm_plot.png")
+    plt.savefig("./pwm_plot.png")
 
-    if show_img:
-        plt.show()
+    # if show_img:
+    #     plt.show()
     plt.clf()
 
 
