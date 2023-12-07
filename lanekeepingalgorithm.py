@@ -578,6 +578,7 @@ stop()
 video.release()
 cv2.destroyAllWindows()
 
-
+print(steer_pwm)
+print(speed_pwm)
 plot_pd(p_vals, d_vals, err_vals, True)
 plot_pwm(speed_pwm, steer_pwm, err_vals, True)
