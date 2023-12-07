@@ -141,11 +141,11 @@ def go():
     """
     global current_speed
 
-    current_speed = 1627500
+    current_speed = 1628500
 
     #Write to move the car
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1627500')
+        filetowrite.write('1628500')
 
 def boost():
 
