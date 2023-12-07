@@ -466,7 +466,7 @@ while counter < max_ticks:
                 # this is used to not check for the second stop sign until many frames later
                 secondStopSignTick = counter + 4       
                 # now check for stop sign less frequently
-                stopSignCheck = 10
+                stopSignCheck = 50 # originally 10
                 # add a delay to calling go faster
                 go_faster_tick = counter + go_faster_tick_delay
                 print("first stop finished!")
