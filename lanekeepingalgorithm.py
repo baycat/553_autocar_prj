@@ -470,13 +470,14 @@ while counter < max_ticks:
                 # add a delay to calling go faster
                 go_faster_tick = counter + go_faster_tick_delay
                 print("first stop finished!")
+                go()
                 boost()
                 
 
 
         # check for the second stop sign
         elif passedFirstStopSign and counter > secondStopSignTick:
-
+            go()
             boost()
             print(secondStopSignTick)
             print (counter)
