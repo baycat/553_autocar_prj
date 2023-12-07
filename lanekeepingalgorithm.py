@@ -476,9 +476,8 @@ while counter < max_ticks:
 
         # check for the second stop sign
         elif passedFirstStopSign and counter > secondStopSignTick:
-            # go()
-            # print('go! part 2')
-            # boost()
+
+            boost()
             print(secondStopSignTick)
             print (counter)
             isStop2SignBool, _ = isRedFloorVisible(frame)
