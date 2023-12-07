@@ -430,8 +430,8 @@ sightDebug = True
 isStopSignBool = False
 
 # start the engines
-go()
-print("go!")
+# go()
+# print("go!")
 
 # main while loop
 print("main loop")
@@ -476,8 +476,8 @@ while counter < max_ticks:
 
         # check for the second stop sign
         elif passedFirstStopSign and counter > secondStopSignTick:
-            boost()
-            print('boost!')
+            go()
+            print('go! part 2')
             print(secondStopSignTick)
             print (counter)
             isStop2SignBool, _ = isRedFloorVisible(frame)
@@ -569,8 +569,8 @@ while counter < max_ticks:
         print("key 27")
         break
 
-    # go()
-    # print("go!")
+    go()
+    print("go!")
     counter += 1
 
 # clean up resources
