@@ -141,21 +141,21 @@ def go():
     """
     global current_speed
 
-    current_speed = 1625000 # 1628500
+    current_speed = 1626500 #1625000 # 1628500
 
     #Write to move the car
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1625000')
+        filetowrite.write('1626500')
 
 def boost():
 
     # Increase the speed of the car
     global current_speed
 
-    current_speed = 1632500
+    current_speed = 1627000
 
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
-        filetowrite.write('1632500')  
+        filetowrite.write('1627000')  
 
 
 # Turn the car
@@ -473,7 +473,6 @@ while counter < max_ticks:
                 go()
                 boost()
                 print('boost')
-                
 
 
         # check for the second stop sign
@@ -487,7 +486,7 @@ while counter < max_ticks:
             if isStop2SignBool:
                 # last stop sign detected, exits while loop
                 print("detected second stop sign, stopping")
-                time.sleep(1) # wait for one second
+                time.sleep(.3) # wait for one second
                 stop()
                 # steer_pwm.append(turn_amt)
                 # speed_pwm.append(current_speed)
