@@ -545,7 +545,8 @@ while counter < max_ticks:
 
     # Update speed and turning
     steer_pwm.append(turn_amt)
-    speed_pwm.append(current_speed)
+    plot_speed = current_speed / 200000
+    speed_pwm.append(plot_speed)
 
     # Used for graphs
     lastError = error
