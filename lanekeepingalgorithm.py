@@ -35,23 +35,28 @@ steeringPin = "P9_14"
 max_ticks = 2000
 
 
+# function to recognize the 'stop sign'
 def getRedFloorBoundaries():
     """
     Gets the hsv boundaries and success boundaries indicating if the floor is red
     :return: [[lower color and success boundaries for red floor], [upper color and success boundaries for red floor]]
     """
+    # gets color values from stop sign text file
     return getBoundaries("redboundaries.txt")
 
+# function to recognize position wrt stop sign
 def isRedFloorVisible(frame):
     """
     Detects whether or not the floor is red
     :param frame: Image
     :return: [(True is the camera sees a red on the floor, false otherwise), video output]
     """
+    # locates stop sign corners
     boundaries = getRedFloorBoundaries()
     return isMostlyColor(frame, boundaries)
 
 
+# function to get most common color in camera
 def isMostlyColor(image, boundaries):
     """
     Detects whether or not the majority of a color on the screen is a particular color
@@ -79,7 +84,7 @@ def isMostlyColor(image, boundaries):
         print(percentage_detected)
     return result, output
 
-
+# function to get color values from object in camera
 def getBoundaries(filename):
     """
     Reads the boundaries from the file filename
@@ -112,7 +117,7 @@ def getBoundaries(filename):
         percentages = [lower_percent, upper_percent]
     return boundaries, percentages
 
-
+# function to stop car movement
 def stop():
 
     global current_speed
@@ -121,6 +126,7 @@ def stop():
     Stops the car
     :return: none
     """
+    # set current speed to low - negligible percentage
     current_speed = 1550000
 
     #Write to stop the car
@@ -131,9 +137,10 @@ def stop():
     with open('/dev/bone/pwm/1/a/enable', 'w') as filetowrite:
         filetowrite.write('1')  
 
-
+    # report stop attempt
     print("Stopped")
 
+# function to set car speed to 8.1%
 def go():
     """
     Sends the car forward at a default PWM
@@ -141,12 +148,14 @@ def go():
     """
     global current_speed
 
+    # 8.1% of 200000
     current_speed = 1626500 #1625000 # 1628500
 
     #Write to move the car
     with open('/dev/bone/pwm/1/a/duty_cycle', 'w') as filetowrite:
         filetowrite.write('1626500')
 
+# function to accelerate car
 def boost():
 
     # Increase the speed of the car
