@@ -1,12 +1,11 @@
-# Users Justin Guilak, Evan Berger, Joshua Ramirez, Joshua Ramirez, Samuel Zhou, "Access Code Cybertruck". 
-# Hackster. URL: https://www.hackster.io/497395/access-code-cybertruck-9f8b8c 
+# Users Anyssa Castorina, Caroline Spindel, Dingding Ye, Jacob Laughlin, Ryan Shores, "Self-Driving Beagle". 
+# Hackster. URL: https://www.hackster.io/fish-fear-us/self-driving-beagle-483a7d
 # based on: https://www.instructables.com/Autonomous-Lane-Keeping-Car-Using-Raspberry-Pi-and/
-# and https://www.hackster.io/really-bad-idea/autonomous-path-following-car-6c4992
+# and https://www.hackster.io/497395/access-code-cybertruck-9f8b8c
 
 import cv2
 import numpy as np
 import matplotlib
-#matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import math
 import time
@@ -556,7 +555,7 @@ while counter < max_ticks:
 
     # Update speed and turning
     steer_pwm.append(turn_amt)
-    plot_speed = current_speed / 200000
+    plot_speed = current_speed / 200000 # Correct speed to percentage values for plotting
     speed_pwm.append(plot_speed)
 
     # Used for graphs
@@ -592,7 +591,7 @@ stop()
 video.release()
 cv2.destroyAllWindows()
 
-print(steer_pwm)
-print(speed_pwm)
+# print(steer_pwm)
+# print(speed_pwm)
 plot_pd(p_vals, d_vals, err_vals, True)
 plot_pwm(speed_pwm, steer_pwm, err_vals, True)
