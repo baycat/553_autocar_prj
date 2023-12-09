@@ -1,3 +1,8 @@
+# Users Justin Guilak, Evan Berger, Joshua Ramirez, Joshua Ramirez, Samuel Zhou, "Access Code Cybertruck". 
+# Hackster. URL: https://www.hackster.io/497395/access-code-cybertruck-9f8b8c 
+# based on: https://www.instructables.com/Autonomous-Lane-Keeping-Car-Using-Raspberry-Pi-and/
+# and https://www.hackster.io/really-bad-idea/autonomous-path-following-car-6c4992
+
 import cv2
 import numpy as np
 import matplotlib
@@ -5,9 +10,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import math
 import time
-
-# based on: https://www.instructables.com/Autonomous-Lane-Keeping-Car-Using-Raspberry-Pi-and/
-# and https://www.hackster.io/really-bad-idea/autonomous-path-following-car-6c4992
 
 # Throttle
 current_speed = 1600000
